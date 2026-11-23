@@ -1,0 +1,15 @@
+{
+  "activePlatformId": "picocalc_pico",
+  "engine": "deki",
+  "engineVersion": "0.40.1",
+  "forceIncludeGuids": [],
+  "lastSavedBy": "0.40.1",
+  "name": "pocket-dungeon",
+  "renderPipelineGuid": "48053c89-7a0f-4004-af8d-c7ad72c85b41",
+  "startupScene": "scenes/main.scene",
+  "structure": "v5",
+  "tags": [
+    "transform_2d"
+  ],
+  "version": "1.0"
+}

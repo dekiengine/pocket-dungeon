@@ -1,0 +1,20 @@
+{
+  "packages": {
+    "deki-2d": {
+      "version": "*"
+    },
+    "deki-desktop-integration": {
+      "version": "*"
+    },
+    "deki-input": {
+      "version": "*"
+    },
+    "deki-rendering": {
+      "version": "*"
+    },
+    "deki-sdl3-integration": {
+      "version": "*"
+    }
+  },
+  "schemaVersion": 1
+}

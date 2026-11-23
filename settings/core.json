@@ -1,0 +1,11 @@
+{
+  "Core": {
+    "capFps": true,
+    "targetFps": 30
+  },
+  "Units": {
+    "inspectorUnit": "Pixels",
+    "pixelsPerMeter": 16.0,
+    "temperatureUnit": "Celsius"
+  }
+}

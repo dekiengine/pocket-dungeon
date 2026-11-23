@@ -1,0 +1,19 @@
+# Everything the Deki Editor generates. Safe to delete; recreated on open/build.
+generated/
+
+# Package sources - Package Manager clones of the source repos
+packages/deki-*/
+
+# Exported asset packs (--export / the Build panel); rebuilt from assets/
+storage/
+
+# IDE / tooling
+.vscode/
+.idea/
+.vs/
+.claude/
+.cache/
+*.swp
+
+# Python byte code
+__pycache__/

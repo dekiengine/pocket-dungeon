@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "objects": [
+    {
+      "active": true,
+      "children": [
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "clearColor": "#0A0C12FF",
+                "clearEveryFrame": true,
+                "farPlane": 100.0,
+                "fieldOfView": 60.0,
+                "litUpToSortOrder": 2147483647,
+                "nearPlane": 0.10000000149011612,
+                "orthoHeight": 20.0,
+                "pixelGrid": "Screen",
+                "pixelPerfect": true,
+                "projection": "Orthographic"
+              },
+              "type": "DekiRendering::CameraComponent"
+            }
+          ],
+          "id": 2,
+          "name": "Camera",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "gameCamera": 2,
+                "infoText": 847,
+                "lightReach": 55,
+                "messageText": 16,
+                "promptText": 797,
+                "statusText": 4,
+                "titleText": 795,
+                "viewHeight": 240
+              },
+              "type": "Crawler"
+            }
+          ],
+          "id": 17,
+          "name": "Crawler",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "components": [],
+      "id": 1,
+      "name": "Root",
+      "transform": {
+        "rotation": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    }
+  ]
+}

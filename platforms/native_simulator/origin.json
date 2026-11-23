@@ -1,0 +1,38 @@
+{
+  "files": {
+    "boot.scene": "e6d5681b100e9e72",
+    "boot.scene.data": "3ffc8aec1c061519"
+  },
+  "package": "deki-desktop-integration",
+  "platform": {
+    "bootScene": "platforms/native_simulator/boot.scene",
+    "colorFormat": "RGB565",
+    "cxxFlags": [
+      "-O0",
+      "-g"
+    ],
+    "defines": [
+      "DEBUG",
+      "DEKI_LOG_ENABLED",
+      "DEKI_3D_TILE_SIZE=128"
+    ],
+    "displayName": "Desktop",
+    "family": "native",
+    "framework": "native",
+    "frameworkOptions": {
+      "displayBus": "SOFTWARE",
+      "displayDriver": "SDL3"
+    },
+    "id": "native_simulator",
+    "provides": [
+      "hosted",
+      "posix-process",
+      "filesystem",
+      "threads",
+      "sdl3",
+      "opengl"
+    ],
+    "screenHeight": 240,
+    "screenWidth": 320
+  }
+}

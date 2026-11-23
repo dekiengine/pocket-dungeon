@@ -1,0 +1,34 @@
+{
+  "bootScene": "platforms/picocalc_pico/boot.scene",
+  "colorFormat": "RGB565",
+  "defines": [
+    "DEKI_PICO"
+  ],
+  "displayName": "ClockworkPi PicoCalc (Pico)",
+  "family": "raspberrypi",
+  "framework": "pico",
+  "frameworkOptions": {
+    "flashSize": 2097152,
+    "loaderOffset": 204800,
+    "picoBoard": "pico",
+    "picoChip": "rp2040",
+    "stdio": "both",
+    "sysClockKhz": 250000
+  },
+  "id": "picocalc_pico",
+  "provides": [
+    "filesystem",
+    "pico",
+    "spi",
+    "i2c",
+    "external-storage"
+  ],
+  "requiresPackages": [
+    "deki-raspberrypi-integration",
+    "deki-display",
+    "deki-clockworkpi-boards"
+  ],
+  "screenDiagonalInches": 4.0,
+  "screenHeight": 320,
+  "screenWidth": 320
+}

@@ -1,0 +1,224 @@
+{
+  "formatVersion": 1,
+  "objects": [
+    {
+      "active": true,
+      "children": [
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "io2Pin": -1,
+                "io3Pin": -1,
+                "maxTransferBytes": 65536,
+                "misoPin": 12,
+                "mosiPin": 11,
+                "sclkPin": 10,
+                "spiHost": 1
+              },
+              "type": "DekiSpi::SPIBusComponent"
+            }
+          ],
+          "id": 701,
+          "name": "SPI Bus (spi1: display)",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "asyncPresent": true,
+                "blInvert": false,
+                "blPin": -1,
+                "busType": "SPI",
+                "controller": "ST7796",
+                "csPin": 13,
+                "d0Pin": -1,
+                "d10Pin": -1,
+                "d11Pin": -1,
+                "d12Pin": -1,
+                "d13Pin": -1,
+                "d14Pin": -1,
+                "d15Pin": -1,
+                "d1Pin": -1,
+                "d2Pin": -1,
+                "d3Pin": -1,
+                "d4Pin": -1,
+                "d5Pin": -1,
+                "d6Pin": -1,
+                "d7Pin": -1,
+                "d8Pin": -1,
+                "d9Pin": -1,
+                "dcPin": 14,
+                "doubleBuffer": false,
+                "initSequence": "# PicoCalc panel: an ST7365P (Sitronix, ST7796 family), started as ClockworkPi's\n# PicoMite does on the PicoCalc (PicoMite.patch, InitDisplaySPI). The ILI9488 list in\n# their lcdspi.c example left a slowly fading ghost of the screen before.\n# Inversion, pixel format and MADCTL are sent by the driver after this.\nF0 C3                  # command set: part I unlocked\nF0 96                  # command set: part II unlocked\nB4 00                  # display inversion: column\nB7 C6                  # entry mode\nB9 02 E0               # gate voltages\nC0 80 06               # power control 1\nC1 15                  # power control 2\nC2 A7                  # power control 3\nC5 04                  # VCOM\nE8 40 8A 00 00 29 19 AA 33   # display output timing\nE0 F0 06 0F 05 04 20 37 33 4C 37 13 14 2B 31   # positive gamma\nE1 F0 11 1B 11 0F 0A 37 43 4C 37 13 13 2C 32   # negative gamma\nF0 3C                  # command set: part I locked\nF0 69                  # command set: part II locked\n11; delay 120          # SLPOUT\n29; delay 20           # DISPON\n",
+                "invertColor": true,
+                "memoryHeight": 480,
+                "memoryWidth": 320,
+                "offsetX": 0,
+                "offsetY": 0,
+                "panelHeight": 320,
+                "panelWidth": 320,
+                "parallelWriteHz": 20000000,
+                "rdPin": -1,
+                "readsOnMosi": false,
+                "rgbOrder": false,
+                "rotation": "Portrait180Mirror",
+                "rstPin": 15,
+                "scanlineSync": false,
+                "spiHost": 1,
+                "spiReadHz": 6000000,
+                "spiWriteHz": 62500000,
+                "swapBytes": false,
+                "tePin": -1,
+                "usePsram": false,
+                "wrPin": -1
+              },
+              "type": "DekiDisplay::DisplayPanelComponent"
+            }
+          ],
+          "id": 702,
+          "name": "Display (ST7365P 320x320, 16-bit)",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "i2cHz": 10000,
+                "i2cPort": 1,
+                "sclPin": 7,
+                "sdaPin": 6
+              },
+              "type": "DekiI2c::I2CBusComponent"
+            }
+          ],
+          "id": 703,
+          "name": "I2C Bus (i2c1: keyboard controller)",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "i2cPort": 1,
+                "keyboardBacklight": -1,
+                "pollIntervalMs": 20,
+                "replyDelayMs": 16,
+                "screenBacklight": -1
+              },
+              "type": "DekiClockworkPi::PicoCalcSetup"
+            }
+          ],
+          "id": 704,
+          "name": "Keyboard, backlights, battery",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "active": true,
+          "children": [],
+          "components": [
+            {
+              "properties": {
+                "cdPin": 22,
+                "clkPin": 18,
+                "cmdPin": -1,
+                "csPin": 17,
+                "d0Pin": -1,
+                "d1Pin": -1,
+                "d2Pin": -1,
+                "d3Pin": -1,
+                "misoPin": 16,
+                "mode": "SPI",
+                "mosiPin": 19,
+                "required": false,
+                "sdmmcHz": 20000000,
+                "spiHz": 15625000
+              },
+              "type": "DekiSdCard::SDCardComponent"
+            }
+          ],
+          "id": 705,
+          "name": "SD Card (spi0)",
+          "transform": {
+            "rotation": 0.0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "components": [
+        {
+          "properties": {
+            "setupComponents": [
+              {
+                "id": 701,
+                "typeId": 2470648303
+              },
+              {
+                "id": 702,
+                "typeId": 183569787
+              },
+              {
+                "id": 703,
+                "typeId": 1919918867
+              },
+              {
+                "id": 704,
+                "typeId": 2300842047
+              },
+              {
+                "id": 705,
+                "typeId": 4082406193
+              }
+            ]
+          },
+          "type": "Deki::PlatformSetupComponent"
+        }
+      ],
+      "id": 1,
+      "name": "Setup",
+      "transform": {
+        "rotation": 0.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    }
+  ]
+}
